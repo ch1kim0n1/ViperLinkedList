@@ -132,7 +132,7 @@ public int size() {
     public String toString() {
         //returns the list in array format
         // [item, item, ....]
-        
+        /*
         VLinkedList list = new VLinkedList();
 
         // Test add method
@@ -140,6 +140,9 @@ public int size() {
         list.add(20);
         list.add(30);
         list.add(40);
+        
+        //initial list
+        //System.out.println(list);
 
         // Test size method
         System.out.println("Size: " + list.size()); // Output: 4
@@ -160,16 +163,42 @@ public int size() {
         list.delete(40);
 
         // Test size method again
-        System.out.println("Size: " + list.size()); // 3 check again
+        System.out.println("Size: " + list.size()); // 4
 
         // Test remove method
         list.remove(1);
 
         // Test get method one more time
-        System.out.println("Get 1: " + list.get(1)); // 30 check again
+        System.out.println("Get 1: " + list.get(1)); // 25
         
-        return "";
-    }
+        //final list
+        //System.out.println(list);
+*/        
+           String output = "[ ";
+           if (this.head == null) {
+            
+            return "";
+        }
+           VNode current = this.head;
+           while (current.getNext() != null) {
+             output = output + current.getValue() + ", ";
+             current = current.getNext();
+             if(current.getNext() == null){
+                 output = output + current.getValue() + " ]";
+             }
+            }
+
+        
+        
+        
+        
+        
+        
+        
+        return output;
+
+        
+}
     
     
 }
