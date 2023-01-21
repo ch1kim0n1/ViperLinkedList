@@ -15,43 +15,20 @@ public class ViperLinkedLists {
         
         VLinkedList list = new VLinkedList();
 
-        // Test add method
-        list.add(10);
-        list.add(20);
-        list.add(30);
-        list.add(40);
-        
-        //initial list
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        list.add(4);
+        list.add(5);
         System.out.println(list);
 
-        // Test size method
-        System.out.println("Size: " + list.size()); // Output: 4
+        list.insert(4, 20);
+        System.out.println(list);
 
-        // Test get method
-        System.out.println("Get 2: " + list.get(2)); // Output: 30
+        list.delete(3);
+        System.out.println(list);
 
-        // Test head method
-        System.out.println("Head: " + list.head().getValue()); // Output: 10
-
-        // Test insert method
-        list.insert(2, 25);
-
-        // Test get method again
-        System.out.println("Get 2: " + list.get(2)); // Output: 25
-
-        // Test delete method
-        list.delete(40);
-
-        // Test size method again
-        System.out.println("Size: " + list.size()); // 4
-
-        // Test remove method
-        list.remove(1);
-
-        // Test get method one more time
-        System.out.println("Get 1: " + list.get(1)); // 25
-        
-        //final list
+        list.remove(3);
         System.out.println(list);
     }
 }
